@@ -10,7 +10,6 @@ import "./Calendar.css";
 
 const Calendar = () => {
   const [value, setValue] = useState(new Date());
-  const [highlightedDays, setHighlightedDays] = useState([1, 2, 13]);
   return (
     <LocalizationProvider dateAdapter={AdapterDateFns}>
       <StaticDatePicker
@@ -25,8 +24,8 @@ const Calendar = () => {
         }}
         renderDay={(day, _value, DayComponentProps) => {
           const isSelected =
-            !DayComponentProps.outsideCurrentMonth &&
-            highlightedDays.indexOf(day.getDate()) >= 0;
+            !DayComponentProps.outsideCurrentMonth;
+            // highlightedDays.indexOf(day.getDate()) >= 0;
 
           return (
             <Badge
