@@ -7,14 +7,14 @@ const authModel = require("./Models/Model");
 const bcrypt = require("bcrypt");
 
 const googleCredentials = {
-  clientID: process.env.GOOGLE_CLIENT_ID,
-  clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-  callbackURL: "http://localhost:8080/google/callback",
+  clientID: "445250897910-ar1gk115ni4vgcla82h1m6ug5m8h82bd.apps.googleusercontent.com",
+  clientSecret: "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",
+  callbackURL: "https://task-manager-fkyv.onrender.com",
 };
 
 const fbCredentials = {
-  clientID: process.env.FACEBOOK_CLIENT_ID,
-  clientSecret: process.env.FACEBOOK_CLIENT_SECRET,
+  clientID: "process.env.FACEBOOK_CLIENT_ID",
+  clientSecret: 'process.env.FACEBOOK_CLIENT_SECRET',
   callbackURL: "http://localhost:8080/facebook/callback",
   profileFields: ["id", "email", "displayName", "picture.type(large)"],
 };
