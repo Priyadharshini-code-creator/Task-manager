@@ -18,13 +18,14 @@ const PORT = 8080;
 const app = express();
 app.use([
   cors({
-    origin: process.env.FRONTEND_DOMAIN,
+    origin: "*", 
     credentials: true,
-    methods: ["GET", "PUT", "PATCH", "PUT", "DELETE"],
+    methods: ["GET", "PUT", "PATCH", "POST", "DELETE"],
   }),
   express.json(),
   express.urlencoded({ extended: true }),
 ]);
+
 
 const sessionStore = new MongoStore({
   mongoUrl: process.env.MONGO_URL,
