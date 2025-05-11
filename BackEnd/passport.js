@@ -9,7 +9,7 @@ const bcrypt = require("bcrypt");
 const googleCredentials = {
   clientID: "445250897910-ar1gk115ni4vgcla82h1m6ug5m8h82bd.apps.googleusercontent.com",
   clientSecret: "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",
-  callbackURL: "https://task-manager-fkyv.onrender.com",
+  callbackURL: "https://task-manager-fkyv.onrender.com/google/callback",
 };
 
 const fbCredentials = {
