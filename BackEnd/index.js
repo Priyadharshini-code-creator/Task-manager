@@ -183,9 +183,9 @@ const authenticator = (req, res, next) => {
   }
   next();
 };
-app.use("/todo", [authenticator, TodoRoutes]);
-app.use("/note", [authenticator, NoteRoutes]);
-app.use("/task", [authenticator, TaskRoutes]);
+app.use("/todo",  TodoRoutes);
+app.use("/note",  NoteRoutes);
+app.use("/task",  TaskRoutes);
 
 app.listen(PORT, () => {
   console.log(`Server Running On Port : ${PORT} `);
